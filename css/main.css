@@ -191,8 +191,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  min-width: 320px;
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -221,6 +220,18 @@ body {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 480px) {
+  .modal-win {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-win {
+    width: 528px;
+  }
+}
+
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -230,7 +241,7 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -240,7 +251,7 @@ body {
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.67;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
 }
@@ -310,8 +321,8 @@ body {
   align-items: center;
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -329,7 +340,7 @@ body {
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-image: url(../images/modal-window/check.svg);
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
   background-color: var(--accent-color);
@@ -349,6 +360,22 @@ body {
 .modal-form-btn {
   display: block;
   align-self: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    display: inline;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+  }
+  .modal-form-checkbox-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .hero {
@@ -478,7 +505,11 @@ body {
   .features__item {
     margin-top: 30px;
     margin-left: 30px;
+    margin-bottom: 0;
     flex-basis: calc((100% - 60px) / 2);
+  }
+  .features__item:not(:last-child) {
+    margin-bottom: 0;
   }
   .features__title {
     text-align: left;
