@@ -1,0 +1,15 @@
+.logo {
+  font-family: 'Raleway', sans-serif;
+  @include font(700, 24px, 28px);
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
+
+.logo-white-theme {
+  color: #000000;
+}
+
+.logo-dark-theme {
+  color: #ffffff;
+}
