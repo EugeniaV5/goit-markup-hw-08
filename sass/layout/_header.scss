@@ -72,12 +72,15 @@
 
 .mobile-menu__container {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
   padding: 48px 40px;
+
+  width: 100vw;
+  height: 100vh;
 }
 
-.mob-menu {
-  margin-bottom: 150px;
-}
 .mob-menu__item {
   margin-bottom: 32px;
 }
@@ -96,6 +99,12 @@
 
 .mob-menu__link-current {
   color: var(--accent-color);
+}
+.mobile-contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: auto;
 }
 
 .mob-contact {
@@ -120,6 +129,7 @@
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -127,7 +137,8 @@
 }
 
 .mob-social__list {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-social__item {
